@@ -10,15 +10,15 @@ import { init } from './billingCycleActions'
 class BillingCycleForm extends Component {
 
 	render() {
-		const { handleSubmit } = this.props
+		const { handleSubmit, readOnly } = this.props
 		return(
 			<form role="form" onSubmit={handleSubmit}>
 				<div className="box-body">
-					<Field name='name' component={LabelAndInput} 
+					<Field name='name' component={LabelAndInput} readOnly={readOnly}
 						label="Nome" cols="12 4" placeholder="Informe o nome"/>
-					<Field name='month' component={LabelAndInput}
+					<Field name='month' component={LabelAndInput} readOnly={readOnly}
 						label="Mês" cols="12 4" placeholder="Informe o mês" type="number"/>
-					<Field name='year' component={LabelAndInput}
+					<Field name='year' component={LabelAndInput} readOnly={readOnly}
 						label="ANo" cols="12 4" placeholder="Informe o ano" type="number"/>
 				</div>
 				<div className="box-footer">
