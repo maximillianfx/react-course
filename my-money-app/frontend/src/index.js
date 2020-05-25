@@ -3,7 +3,7 @@ import * as serviceWorker from './serviceWorker';
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './main/app'
-import Routes from './main/routes'
+import AuthOrApp from './main/authOrApp'
 
 import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
@@ -19,7 +19,7 @@ const store = applyMiddleware(multi, thunk, promise)(createStore)(reducers, devT
 
 ReactDOM.render(
 	<Provider store={store}>
-		<Routes/>
+		<AuthOrApp />
 	</Provider>,
 	document.getElementById("app")
 )
